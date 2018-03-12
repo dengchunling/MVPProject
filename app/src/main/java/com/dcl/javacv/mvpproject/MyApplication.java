@@ -2,6 +2,10 @@ package com.dcl.javacv.mvpproject;
 
 import android.app.Application;
 
+import com.dcl.javacv.mvpproject.di.component.AppComponent;
+import com.dcl.javacv.mvpproject.di.component.DaggerAppComponent;
+import com.dcl.javacv.mvpproject.di.module.AppModule;
+import com.dcl.javacv.mvpproject.di.module.HttpModule;
 import com.squareup.leakcanary.LeakCanary;
 
 /**
@@ -10,6 +14,7 @@ import com.squareup.leakcanary.LeakCanary;
 
 public class MyApplication extends Application {
     private static MyApplication instance;
+    private static AppComponent appComponent;
 
     public static MyApplication getInstance() {
         return instance;
@@ -34,5 +39,20 @@ public class MyApplication extends Application {
             return;
         }
         LeakCanary.install(this);
+    }
+
+    /**
+     * 获取AppComponent.
+     *
+     * @return AppComponent
+     */
+    public static synchronized AppComponent getAppComponent() {
+        if (null == appComponent) {
+            appComponent = DaggerAppComponent.builder()
+                    .appModule(new AppModule(getInstance()))
+                    .httpModule(new HttpModule())
+                    .build();
+        }
+        return appComponent;
     }
 }
