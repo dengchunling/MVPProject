@@ -1,7 +1,7 @@
 package com.dcl.javacv.mvpproject.di.module;
 
 import com.dcl.javacv.mvpproject.di.qualifier.ApiUrl;
-import com.dcl.javacv.mvpproject.model.http.ProtocolHttp;
+import com.dcl.javacv.mvpproject.model.http.api.Api;
 import com.dcl.javacv.mvpproject.model.http.api.HttpApi;
 
 import java.util.concurrent.TimeUnit;
@@ -55,7 +55,7 @@ public class HttpModule {
     @Singleton
     @ApiUrl
     Retrofit providesApiRetrofit(Retrofit.Builder builder, OkHttpClient client) {
-        return createRetrofit(builder, client, ProtocolHttp.HTTP_HOST);//这里就是你的网络请求的url
+        return createRetrofit(builder, client, Api.HTTP_HOST);//这里就是你的网络请求的url
     }
 
     private Retrofit createRetrofit(Retrofit.Builder builder, OkHttpClient client, String host) {

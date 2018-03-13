@@ -16,8 +16,22 @@ android {
             }
         }
     }
-    buildTypes {
+    signingConfigs {
         release {
+
+        }
+        debug {
+
+        }
+    }
+    buildTypes {
+        debug {
+            buildConfigField("String", "HOST_URL", "\"http://110.185.107.86:5000\"")
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
+            buildConfigField("String", "HOST_URL", "\"http://211.149.178.98:8088\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

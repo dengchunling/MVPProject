@@ -3,7 +3,6 @@ package com.dcl.javacv.mvpproject.model.http.api;
 import com.dcl.javacv.mvpproject.model.bean.Login;
 import com.dcl.javacv.mvpproject.model.http.HttpNoResult;
 import com.dcl.javacv.mvpproject.model.http.HttpResult;
-import com.dcl.javacv.mvpproject.model.http.ProtocolHttp;
 
 import io.reactivex.Flowable;
 import retrofit2.http.Field;
@@ -22,16 +21,17 @@ public interface HttpApi {
      * @return {"code":0}
      */
     @FormUrlEncoded
-    @POST(ProtocolHttp.METHOD_LOGIN_CODE)
+    @POST(Api.METHOD_LOGIN_CODE)
     Flowable<HttpNoResult> loginCode(@Field("phone") String phone);
 
     /**
-     * 登录时获取验证码.
+     * 登录
      *
      * @param phone 手机号
+     * @param code 验证码
      * @return {"code":0}
      */
     @FormUrlEncoded
-    @POST(ProtocolHttp.METHOD_LOGIN)
+    @POST(Api.METHOD_LOGIN)
     Flowable<HttpResult<Login>> login(@Field("phone") String phone, @Field("code") String code);
 }
