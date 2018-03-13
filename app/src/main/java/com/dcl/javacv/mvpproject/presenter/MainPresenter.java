@@ -9,8 +9,7 @@ import javax.inject.Inject;
  * Created by dengchunlin on 2018/3/12.
  */
 
-public class MainPresenter extends BaseMvpPresenter<MainContract.IView>
-        implements MainContract.Presenter {
+public class MainPresenter extends BaseMvpPresenter<MainContract.IView> implements MainContract.Presenter {
     @Inject
     MainPresenter() {
     }

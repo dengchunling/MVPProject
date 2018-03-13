@@ -28,13 +28,15 @@ import com.readystatesoftware.systembartint.SystemBarTintManager;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportActivity;
 
 /**
  * Created by Administrator on 2018/3/12.
  */
 
-public abstract class BaseActivity extends SupportActivity implements BaseView,View.OnClickListener {
+public abstract class BaseActivity extends SupportActivity implements BaseView, View.OnClickListener {
     private AlertDialog loadingDialog;
 
     /**
@@ -49,6 +51,7 @@ public abstract class BaseActivity extends SupportActivity implements BaseView,V
     private TextView tvToolbarTitle;
     private TextView tvToolbarRight;
     private TextView tvBack;
+    private Unbinder unbinder;
 
 
     @Override
@@ -66,6 +69,10 @@ public abstract class BaseActivity extends SupportActivity implements BaseView,V
         } else {
             View rootView = getLayoutInflater().inflate(layoutId, rootLinearLayout, true);
             setContentView(rootView);
+        }
+        //需要在setContentView方法之后调用
+        if (unbinder == null) {
+            unbinder = ButterKnife.bind(this);
         }
         stateBar();
         initView();
@@ -123,6 +130,10 @@ public abstract class BaseActivity extends SupportActivity implements BaseView,V
     protected void onDestroy() {
         activities.remove(this);
         super.onDestroy();
+        if (unbinder != null) {
+            unbinder.unbind();
+            unbinder = null;
+        }
     }
 
     protected void initData() {
@@ -165,13 +176,14 @@ public abstract class BaseActivity extends SupportActivity implements BaseView,V
 
     /**
      * 初始化toolbar的内容
+     *
      * @param isShowToolbar 是否显示toolbar
-     * @param isShowBack 是否显示左边的TextView
-     * @param isShowMore 是否显示右边的TextView
+     * @param isShowBack    是否显示左边的TextView
+     * @param isShowMore    是否显示右边的TextView
      * @return 当前activity对象，可以连点
      */
     protected BaseActivity initToolbar(boolean isShowToolbar, boolean isShowBack,
-                                         boolean isShowMore) {
+                                       boolean isShowMore) {
 //        setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         if (null != actionBar) {
