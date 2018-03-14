@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.dcl.javacv.mvpproject.utils.ToastUtils;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import me.yokeyword.fragmentation.SupportFragment;
 
 /**
@@ -19,6 +21,7 @@ public abstract class BaseFragment extends SupportFragment implements BaseView, 
 
     protected boolean isInit;
     private View rootView;
+    private Unbinder unbinder;
 
     @Nullable
     @Override
@@ -35,6 +38,8 @@ public abstract class BaseFragment extends SupportFragment implements BaseView, 
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         rootView = view;
+        if (unbinder == null)
+            unbinder = ButterKnife.bind(this, rootView);
     }
 
     @Override

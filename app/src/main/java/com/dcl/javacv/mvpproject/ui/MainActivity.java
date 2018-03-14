@@ -1,10 +1,14 @@
-package com.dcl.javacv.mvpproject;
+package com.dcl.javacv.mvpproject.ui;
 
 import android.os.Bundle;
 
+import com.dcl.javacv.mvpproject.R;
 import com.dcl.javacv.mvpproject.base.BaseMvpActivity;
 import com.dcl.javacv.mvpproject.contact.MainContract;
 import com.dcl.javacv.mvpproject.presenter.MainPresenter;
+import com.dcl.javacv.mvpproject.ui.login.LoginActivity;
+
+import butterknife.OnClick;
 
 public class MainActivity extends BaseMvpActivity<MainPresenter> implements MainContract.IView {
 
@@ -23,5 +27,10 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     @Override
     protected void initInject() {
         getActivityComponent().inject(this);
+    }
+
+    @OnClick(R.id.go_login)
+    public void onViewClicked() {
+        LoginActivity.startIntentLoginActivity(this);
     }
 }

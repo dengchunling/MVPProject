@@ -7,6 +7,7 @@ import javax.inject.Scope;
 
 /**
  * Created by dengchunlin on 2018/3/12.
+ * 作用域
  */
 @Scope
 @Retention(RetentionPolicy.RUNTIME)
