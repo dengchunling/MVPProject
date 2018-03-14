@@ -1,5 +1,6 @@
 package com.dcl.javacv.mvpproject.base;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.Nullable;
@@ -135,5 +136,10 @@ public abstract class BaseFragment extends SupportFragment implements BaseView, 
     @Override
     public void myFinish() {
         onBackPressedSupport();
+    }
+
+    @Override
+    public Context getMyContext() {
+        return getContext();
     }
 }

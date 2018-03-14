@@ -1,6 +1,7 @@
 package com.dcl.javacv.mvpproject.base;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -328,5 +329,10 @@ public abstract class BaseActivity extends SupportActivity implements BaseView, 
     @Override
     public void onBackPressedSupport() {
         super.onBackPressedSupport();
+    }
+
+    @Override
+    public Context getMyContext() {
+        return this;
     }
 }
