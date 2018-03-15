@@ -1,5 +1,6 @@
 package com.dcl.javacv.mvpproject.base;
 
+import android.content.Context;
 import android.support.annotation.StringRes;
 
 /**
@@ -18,4 +19,6 @@ public interface BaseView {
     void invalidToken();
 
     void myFinish();
+
+    Context getMyContext();
 }

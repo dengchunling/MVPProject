@@ -14,5 +14,6 @@ public interface LoginContract {
 
     interface Presenter extends BasePresenter<IView>{
         void login(String username,String password);
+        void requestPermiss();
     }
 }
