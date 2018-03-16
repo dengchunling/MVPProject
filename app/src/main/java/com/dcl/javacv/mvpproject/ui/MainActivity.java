@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.FutureTarget;
 import com.bumptech.glide.request.RequestOptions;
 import com.bumptech.glide.request.target.SimpleTarget;
@@ -69,7 +70,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
     public void onMLoadImageClicked() {
 
         RequestOptions requestOptions = new RequestOptions()
-//                .skipMemoryCache(true)//禁用Glide缓存功能，默认false开启
+                .skipMemoryCache(true)//禁用Glide缓存功能，默认false开启
 //                .placeholder(R.mipmap.default_image)
 //                .circleCrop()//圆形化剪裁
                 /**
@@ -85,7 +86,7 @@ public class MainActivity extends BaseMvpActivity<MainPresenter> implements Main
                  * DiskCacheStrategy.ALL   表示既缓存原始图片，也缓存转换过后的图片
                  * DiskCacheStrategy.AUTOMATIC   表示让Glide根据图片资源智能地选择使用哪一种缓存策略（默认选项）
                  */
-//                .diskCacheStrategy(DiskCacheStrategy.NONE)//禁用掉Glide的硬盘缓存功能
+                .diskCacheStrategy(DiskCacheStrategy.NONE)//禁用掉Glide的硬盘缓存功能
                 ;
         Glide.with(this)
 //                .asDrawable()//asFile(),asGif(),asBitmap(),asDrawable()
