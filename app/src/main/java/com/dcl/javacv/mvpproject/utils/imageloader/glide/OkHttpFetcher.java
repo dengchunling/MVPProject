@@ -1,4 +1,4 @@
-package com.dcl.javacv.mvpproject.utils.glide;
+package com.dcl.javacv.mvpproject.utils.imageloader.glide;
 
 import android.support.annotation.NonNull;
 

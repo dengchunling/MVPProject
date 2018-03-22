@@ -6,11 +6,10 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.GlideBuilder;
 import com.bumptech.glide.Registry;
 import com.bumptech.glide.annotation.GlideModule;
-import com.bumptech.glide.load.DecodeFormat;
 import com.bumptech.glide.load.engine.cache.ExternalPreferredCacheDiskCacheFactory;
 import com.bumptech.glide.load.model.GlideUrl;
 import com.bumptech.glide.module.AppGlideModule;
-import com.dcl.javacv.mvpproject.utils.glide.OkHttpGlideUrlLoader;
+import com.dcl.javacv.mvpproject.utils.imageloader.glide.OkHttpGlideUrlLoader;
 
 import java.io.InputStream;
 
@@ -36,7 +35,7 @@ public class MyGlideModule extends AppGlideModule {
          */
         builder.setDiskCache(new ExternalPreferredCacheDiskCacheFactory(context, DISK_CACHE_SIZE));
         //设置图片加载的格式
-        builder.setDecodeFormat(DecodeFormat.PREFER_RGB_565);
+//        builder.setDecodeFormat(DecodeFormat.DEFAULT);
     }
 
     /**
