@@ -1,4 +1,4 @@
-package com.dcl.javacv.mvpproject.contact;
+package com.dcl.javacv.mvpproject.contract;
 
 import com.dcl.javacv.mvpproject.base.BasePresenter;
 import com.dcl.javacv.mvpproject.base.BaseView;

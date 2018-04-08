@@ -15,7 +15,7 @@ import com.bumptech.glide.request.target.SimpleTarget;
 import com.bumptech.glide.request.transition.Transition;
 import com.dcl.javacv.mvpproject.R;
 import com.dcl.javacv.mvpproject.base.BaseMvpActivity;
-import com.dcl.javacv.mvpproject.contact.MainContract;
+import com.dcl.javacv.mvpproject.contract.MainContract;
 import com.dcl.javacv.mvpproject.model.http.MyRxUtils;
 import com.dcl.javacv.mvpproject.model.http.MySubscriber;
 import com.dcl.javacv.mvpproject.presenter.MainPresenter;

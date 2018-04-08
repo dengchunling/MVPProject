@@ -1,15 +1,13 @@
 package com.dcl.javacv.mvpproject.ui.login;
 
-import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.dcl.javacv.mvpproject.R;
 import com.dcl.javacv.mvpproject.base.BaseMvpActivity;
-import com.dcl.javacv.mvpproject.contact.LoginContract;
+import com.dcl.javacv.mvpproject.contract.LoginContract;
 import com.dcl.javacv.mvpproject.presenter.LoginPresenter;
-import com.dcl.javacv.mvpproject.utils.RxPerUtils;
 
 import butterknife.OnClick;
 

@@ -5,7 +5,7 @@ import android.app.Activity;
 
 import com.dcl.javacv.mvpproject.MyApplication;
 import com.dcl.javacv.mvpproject.base.BaseMvpPresenter;
-import com.dcl.javacv.mvpproject.contact.LoginContract;
+import com.dcl.javacv.mvpproject.contract.LoginContract;
 import com.dcl.javacv.mvpproject.model.DataHelper;
 import com.dcl.javacv.mvpproject.model.bean.Login;
 import com.dcl.javacv.mvpproject.model.http.MyRxUtils;
@@ -13,9 +13,6 @@ import com.dcl.javacv.mvpproject.model.http.MySubscriber;
 import com.dcl.javacv.mvpproject.utils.RxPerUtils;
 
 import javax.inject.Inject;
-
-import kotlin.jvm.functions.Function0;
-import kotlin.jvm.functions.Function1;
 
 /**
  * Created by Administrator on 2018/3/13.

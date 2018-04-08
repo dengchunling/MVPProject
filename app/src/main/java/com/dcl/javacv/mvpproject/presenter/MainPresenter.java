@@ -2,7 +2,7 @@ package com.dcl.javacv.mvpproject.presenter;
 
 import com.dcl.javacv.mvpproject.MyApplication;
 import com.dcl.javacv.mvpproject.base.BaseMvpPresenter;
-import com.dcl.javacv.mvpproject.contact.MainContract;
+import com.dcl.javacv.mvpproject.contract.MainContract;
 import com.dcl.javacv.mvpproject.model.DataHelper;
 import com.dcl.javacv.mvpproject.model.http.HttpNoResult;
 import com.dcl.javacv.mvpproject.model.http.MyRxUtils;
