@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.dcl.javacv.mvpproject.ui.MainActivity"
+    tools:context="com.dcl.javacv.mvpproject.com.dcl.javacv.baidu.ui.MainActivity"
     android:orientation="vertical">
 
     <Button
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/designbump"
         android:layout_gravity="center"/>
-    <com.dcl.javacv.mvpproject.view.GiveLikeView
+    <com.dcl.javacv.baidu.view.GiveLikeView
         android:id="@+id/grid_view_image"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
