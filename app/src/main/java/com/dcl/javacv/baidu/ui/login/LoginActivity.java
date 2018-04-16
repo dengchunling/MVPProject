@@ -4,9 +4,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.dcl.javacv.baidu.R;
 import com.dcl.javacv.baidu.base.BaseMvpActivity;
 import com.dcl.javacv.baidu.contract.LoginContract;
-import com.dcl.javacv.mvpproject.R;
 import com.dcl.javacv.baidu.presenter.LoginPresenter;
 
 import butterknife.OnClick;

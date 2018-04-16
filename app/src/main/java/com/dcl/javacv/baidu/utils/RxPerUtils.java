@@ -7,7 +7,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.support.v7.app.AlertDialog;
 
-import com.dcl.javacv.mvpproject.R;
+import com.dcl.javacv.baidu.R;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import org.jetbrains.annotations.NotNull;

@@ -3,8 +3,8 @@ package com.dcl.javacv.baidu;
 import android.app.Application;
 
 import com.dcl.javacv.baidu.di.component.AppComponent;
+import com.dcl.javacv.baidu.di.component.DaggerAppComponent;
 import com.dcl.javacv.baidu.di.module.HttpModule;
-import com.dcl.javacv.mvpproject.di.component.DaggerAppComponent;
 import com.dcl.javacv.baidu.di.module.AppModule;
 import com.squareup.leakcanary.LeakCanary;
 

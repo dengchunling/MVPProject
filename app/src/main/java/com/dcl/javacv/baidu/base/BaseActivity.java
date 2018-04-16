@@ -19,9 +19,9 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.dcl.javacv.baidu.MyApplication;
+import com.dcl.javacv.baidu.R;
 import com.dcl.javacv.baidu.di.component.ActivityComponent;
-import com.dcl.javacv.mvpproject.R;
-import com.dcl.javacv.mvpproject.di.component.DaggerActivityComponent;
+import com.dcl.javacv.baidu.di.component.DaggerActivityComponent;
 import com.dcl.javacv.baidu.di.module.ActivityModule;
 import com.dcl.javacv.baidu.utils.ToastUtils;
 import com.readystatesoftware.systembartint.SystemBarTintManager;

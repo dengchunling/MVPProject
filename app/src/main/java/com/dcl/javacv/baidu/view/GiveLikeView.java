@@ -14,7 +14,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 
-import com.dcl.javacv.mvpproject.R;
+import com.dcl.javacv.baidu.R;
+
 
 /**
  * Created by Administrator on 2018/3/20.

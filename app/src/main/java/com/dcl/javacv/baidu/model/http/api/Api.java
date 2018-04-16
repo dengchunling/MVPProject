@@ -1,6 +1,7 @@
 package com.dcl.javacv.baidu.model.http.api;
 
-import com.dcl.javacv.mvpproject.BuildConfig;
+
+import com.dcl.javacv.baidu.BuildConfig;
 
 /**
  * Created by Administrator on 2018/3/13.
