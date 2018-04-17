@@ -3,7 +3,6 @@ package com.dcl.javacv.mvpproject.utils.imageloader;
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
-import net.dgg.lib.base.imageloader.ImageConfiguration;
 
 import io.reactivex.Observable;
 

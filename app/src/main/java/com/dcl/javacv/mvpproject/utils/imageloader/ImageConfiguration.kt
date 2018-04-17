@@ -1,4 +1,4 @@
-package net.dgg.lib.base.imageloader
+package com.dcl.javacv.mvpproject.utils.imageloader
 
 import android.content.res.Resources
 import android.graphics.drawable.Drawable
