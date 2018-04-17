@@ -50,7 +50,7 @@ public class BaiduActivity extends BaseMvpActivity<BaiduPresenter> implements Ba
         //注册监听函数
         mLocationClient.registerLocationListener(myListener);
 
-        rxPermissions=new RxPermissions(this);
+        rxPermissions = new RxPermissions(this);
         requestPermissions();
         RxBus.getInstance().toObservable(BDLocation.class)
                 .subscribeOn(Schedulers.io())
@@ -64,10 +64,9 @@ public class BaiduActivity extends BaseMvpActivity<BaiduPresenter> implements Ba
                         String district = location.getDistrict();    //获取区县
                         String street = location.getStreet();    //获取街道信息
                         String locationDescribe = location.getLocationDescribe();    //获取位置描述信息
-                        if(!TextUtils.isEmpty(country + province + city + district + street + addr +
-                                "\n" + locationDescribe))
-                            showLocation.setText(country + province + city + district + street + addr +
-                                    "\n" + locationDescribe);
+                        String temp = country + province + city + district + street + addr + "\n" + locationDescribe;
+                        if (!TextUtils.isEmpty(temp))
+                            showLocation.setText(temp);
                     }
                 });
 
